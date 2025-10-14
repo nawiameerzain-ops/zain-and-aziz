@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Car Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 id="carName">Car Details</h1>
+      <p class="instruction">
+        Click the front door to see the 
+        <span id="interiorLink" onclick="showInterior()" style="color: blue; cursor: pointer; text-decoration: underline;">
+          interior
+        </span> 
+        view.
+      </p>
+
+      <div class="car-area">
+        <img id="carImage" alt="Car Side View" src="images/default_side.jpg">
+      </div>
+
+      <button id="backBtn" onclick="showSide()" class="hidden">Back</button>
+
+      <div id="carSpecs"></div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

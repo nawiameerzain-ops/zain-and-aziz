@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Fun Facts About Cars</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="animate-bounce">Contact Us</h1>
+      <p class="animate-bounce">Questions, feedback, or suggestions? Reach out below.</p>
+
+      <div class="contact-form animate-bounce">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+        <button id="sendBtn">Send Message</button>
+      </div>
+
+      <div id="formResponse" class="animate-bounce"></div>
+    </div>
+  </main>
+
+  <script>
+    const sendBtn = document.getElementById('sendBtn');
+    const response = document.getElementById('formResponse');
+
+    sendBtn.addEventListener('click', function() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if(name && email && message) {
+        response.textContent = `Thanks, ${name}! Your message has been sent.`;
+      } else {
+        response.textContent = 'Please fill in all fields.';
+      }
+    });
+  </script>
+</body>
+</html>

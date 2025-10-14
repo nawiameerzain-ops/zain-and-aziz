@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Facts About Cars</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Fun Facts About Cars</h1>
+      <p>Type a car name or click "Show List" to choose.</p>
+
+      <input type="text" id="carInput" placeholder="Type a car name...">
+      <div class="buttons">
+        <button onclick="showCar()">Submit</button>
+        <button onclick="showList()">Show List</button>
+      </div>
+
+      <div class="car-list">
+        <ul>
+          <li onclick="document.getElementById('carInput').value='Porsche 911 GT3 RS'">Porsche 911 GT3 RS</li>
+          <li onclick="document.getElementById('carInput').value='Ferrari 488 Pista'">Ferrari 488 Pista</li>
+          <li onclick="document.getElementById('carInput').value='Lamborghini Huracán EVO'">Lamborghini Huracán EVO</li>
+          <li onclick="document.getElementById('carInput').value='McLaren 720S'">McLaren 720S</li>
+          <li onclick="document.getElementById('carInput').value='Nissan GT-R Nismo'">Nissan GT-R Nismo</li>
+        </ul>
+      </div>
+
+      <div id="carDisplay"></div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
